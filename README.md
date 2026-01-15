@@ -20,5 +20,7 @@ BDH_ViT/
 - Used both forward and backward Feature extraction with BDH Linear Attention Block
 - Added Skip Connections so that no gradient vanishes and information is preserved across layers
 - Patched up and linearized the image features for Attention to work
+- Added scaling to skip connections and dropout to Layers of MLP Block
+- Added Positional Embeddings for features
 
 ## > HOW TO
