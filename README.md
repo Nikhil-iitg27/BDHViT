@@ -6,15 +6,15 @@ BDH_ViT/
 ├── attention.py
 └── backbone.py
 
-
-
 ## > FILES
  
 ### Implemented O(N) BDH Linear Attention (attention.py)
 
 - Replaced Softmax with L1 feature normalization for linear complexity.
 - Implemented global Linear Attention (K^T * V) context aggregation.
-- Added sparse expansion layer to induce scale-free 'hub' formation.
+- Added sparse expansion layer with power law scaling to induce scale-free 'hub' formation.
+- Added gated Persistant Memory structure for memory preservation.
+- Added Task Conditional to determine what Memory stored is actually important
 
 ### Implemented Standard BDH ViT Block and Backbone
 - Used both forward and backward Feature extraction with BDH Linear Attention Block
