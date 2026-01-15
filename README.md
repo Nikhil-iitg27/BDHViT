@@ -1,20 +1,24 @@
 # ViT implimentation of BDH (Baby Dragon Hatchling) introduced by pathway
 
-FILE STRUCTURE
+## > FILE STRUCTURE
 
-BDH_ViT
- |
- |--- attention.py
- |
-
+BDH_ViT/
+├── attention.py
+└── backbone.py
 
 
-FILES
+
+## > FILES
  
-Implement O(N) BDH Linear Attention (attention.py)
+### Implemented O(N) BDH Linear Attention (attention.py)
 
 - Replaced Softmax with L1 feature normalization for linear complexity.
 - Implemented global Linear Attention (K^T * V) context aggregation.
 - Added sparse expansion layer to induce scale-free 'hub' formation.
 
-HOW TO
+### Implemented Standard BDH ViT Block and Backbone
+- Used both forward and backward Feature extraction with BDH Linear Attention Block
+- Added Skip Connections so that no gradient vanishes and information is preserved across layers
+- Patched up and linearized the image features for Attention to work
+
+## > HOW TO
