@@ -1,4 +1,5 @@
 # ViT implimentation of BDH (Baby Dragon Hatchling) introduced by pathway
+Generalized BDH-Inspired Linear Attention with Persistent Hub Memory for Vision
 
 ## > FILE STRUCTURE
 

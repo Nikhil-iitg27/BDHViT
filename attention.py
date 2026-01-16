@@ -1,6 +1,7 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+from typing import Optional
 
 class BDHLinearAttention(nn.Module):
     """
@@ -54,7 +55,7 @@ class BDHLinearAttention(nn.Module):
         # Pre-normalization
         self.norm = nn.LayerNorm(dim)
 
-    def forward(self, x: torch.Tensor, *, update_mem: bool = True, read_mem: bool = True, task_id: torch.Tensor | None = None):
+    def forward(self, x: torch.Tensor, *, update_mem: bool = True, read_mem: bool = True, task_id: Optional[torch.Tensor] = None):
         """
         Args:
             x: [B, N, D] token embeddings
